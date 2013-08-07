@@ -3,6 +3,7 @@ package br.com.comerpizza
 class Pizza {
 
 	String name
+	String description
 	Boolean isHidden		//inativar a pizza temporariamente por falta de ingrediente
 	Boolean isActive		//desativar o tipo de pizza			
 	Size size 				
@@ -11,6 +12,7 @@ class Pizza {
 	Date createdOn
 	Date updatedOn
 	Double price
+
 
 	static hasMany = [
 		flavors:Flavor,
