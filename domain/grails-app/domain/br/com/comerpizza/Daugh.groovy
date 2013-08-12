@@ -2,6 +2,8 @@ package br.com.comerpizza
 
 class Daugh {
 
+	//Domimio para a massa
+
 	String name
 	String description
 	String imageUrl

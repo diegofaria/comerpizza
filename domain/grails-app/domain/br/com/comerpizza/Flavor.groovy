@@ -2,6 +2,8 @@ package br.com.comerpizza
 
 class Flavor {
 
+	//Dominio para o sabor
+
 	String name
 	String description
 	String imageUrl
