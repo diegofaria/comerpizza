@@ -2,6 +2,8 @@ package br.com.comerpizza
 
 class Size {
 
+	//Domimio para o tamanho da pizza
+
 	String name
 	String description
 	String imageUrl
