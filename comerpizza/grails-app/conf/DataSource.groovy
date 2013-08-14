@@ -13,8 +13,13 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+            dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+            driverClassName = "com.mysql.jdbc.Driver"
+            pooled = true
+            dbCreate = "update" 
+            url="jdbc:mysql://localhost:3306/comerpizza"
+            username = "root"
+            password = "root"
         }
     }
     test {
