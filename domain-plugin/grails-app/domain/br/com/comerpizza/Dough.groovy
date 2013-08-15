@@ -6,7 +6,7 @@ class Dough {
 	String description
 	String photoUrl
 	String thumbnailUrl
-	Boolean isHidden
+	Boolean isHidden = false
 	Boolean isActive
 
     static constraints = {

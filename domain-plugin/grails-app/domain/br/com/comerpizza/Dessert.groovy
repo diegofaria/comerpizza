@@ -7,8 +7,8 @@ class Dessert {
 	Double price
 	String photoUrl
 	String thumbnailUrl
-	Boolean isHidden		//inativar a sobremesa temporariamente
-	Boolean isActive		//desativar sobremesa
+	Boolean isHidden = false	//inativar a sobremesa temporariamente
+	Boolean isActive			//desativar sobremesa
 	Date createdOn
 	Date updatedOn
 

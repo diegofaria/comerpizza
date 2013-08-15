@@ -1,13 +1,11 @@
 package br.com.comerpizza
 
 class Size {
-
-	//Domimio para o tamanho da pizza
-
+	//tamanho da pizza
 	String name
 	String description
 	String photoUrl
-	Boolean isHidden
+	Boolean isHidden = false
 	Boolean isActive
 
     static constraints = {

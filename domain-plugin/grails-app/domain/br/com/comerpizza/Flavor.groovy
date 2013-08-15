@@ -4,7 +4,7 @@ class Flavor {
 	//sabor
 	String name
 	String description
-	Boolean isHidden
+	Boolean isHidden = false
 	Boolean isActive
 
 	static hasMany = [

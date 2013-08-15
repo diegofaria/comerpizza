@@ -7,8 +7,8 @@ class Drink {
 	Double price
 	String photoUrl
 	String thumbnailUrl
-	Boolean isHidden		//inativar a bebida temporariamente
-	Boolean isActive		//desativar bebida
+	Boolean isHidden = false	//inativar a bebida temporariamente
+	Boolean isActive			//desativar bebida
 	Date createdOn
 	Date updatedOn
 

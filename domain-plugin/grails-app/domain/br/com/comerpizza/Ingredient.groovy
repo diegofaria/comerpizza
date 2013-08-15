@@ -1,15 +1,14 @@
 package br.com.comerpizza
 
 class Ingredient {
-
-	//Dominio para o ingrediente
-
+	//ingrediente
 	String name
 	String description
-	Boolean isHidden
+	Boolean isHidden = false
 	Boolean isActive
 
     static constraints = {
     	name(blank: false, nullable: false)
+    	description(nullable: true)
     }
 }
