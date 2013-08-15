@@ -37,7 +37,9 @@
 /web-app/WEB-INF/classes
 
 # "temporary" build files
-/target
+admin/target
+comerpizza/target
+domain-plugin/target
 
 # other
 *.iws
