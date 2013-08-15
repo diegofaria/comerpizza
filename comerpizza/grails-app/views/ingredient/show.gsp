@@ -59,15 +59,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${ingredientInstance?.price}">
-				<li class="fieldcontain">
-					<span id="price-label" class="property-label"><g:message code="ingredient.price.label" default="Price" /></span>
-					
-						<span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${ingredientInstance}" field="price"/></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

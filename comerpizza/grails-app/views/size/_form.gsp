@@ -18,14 +18,6 @@
 	<g:textField name="description" required="" value="${sizeInstance?.description}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: sizeInstance, field: 'imageUrl', 'error')} required">
-	<label for="imageUrl">
-		<g:message code="size.imageUrl.label" default="Image Url" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="imageUrl" required="" value="${sizeInstance?.imageUrl}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: sizeInstance, field: 'isActive', 'error')} ">
 	<label for="isActive">
 		<g:message code="size.isActive.label" default="Is Active" />
@@ -40,5 +32,13 @@
 		
 	</label>
 	<g:checkBox name="isHidden" value="${sizeInstance?.isHidden}" />
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: sizeInstance, field: 'photoUrl', 'error')} ">
+	<label for="photoUrl">
+		<g:message code="size.photoUrl.label" default="Photo Url" />
+		
+	</label>
+	<g:textField name="photoUrl" value="${sizeInstance?.photoUrl}"/>
 </div>
 

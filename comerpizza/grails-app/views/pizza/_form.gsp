@@ -10,6 +10,14 @@
 	<g:textField name="name" required="" value="${pizzaInstance?.name}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'flavor', 'error')} required">
+	<label for="flavor">
+		<g:message code="pizza.flavor.label" default="Flavor" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="flavor" name="flavor.id" from="${br.com.comerpizza.Flavor.list()}" optionKey="id" required="" value="${pizzaInstance?.flavor?.id}" class="many-to-one"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'size', 'error')} required">
 	<label for="size">
 		<g:message code="pizza.size.label" default="Size" />
@@ -18,20 +26,12 @@
 	<g:select id="size" name="size.id" from="${br.com.comerpizza.Size.list()}" optionKey="id" required="" value="${pizzaInstance?.size?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'specialBorder', 'error')} ">
-	<label for="specialBorder">
-		<g:message code="pizza.specialBorder.label" default="Special Border" />
-		
+<div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'price', 'error')} required">
+	<label for="price">
+		<g:message code="pizza.price.label" default="Price" />
+		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="specialBorder" name="specialBorder.id" from="${br.com.comerpizza.Border.list()}" optionKey="id" value="${pizzaInstance?.specialBorder?.id}" class="many-to-one" noSelection="['null': '']"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'dough', 'error')} ">
-	<label for="dough">
-		<g:message code="pizza.dough.label" default="Dough" />
-		
-	</label>
-	<g:select id="dough" name="dough.id" from="${br.com.comerpizza.Dough.list()}" optionKey="id" value="${pizzaInstance?.dough?.id}" class="many-to-one" noSelection="['null': '']"/>
+	<g:field name="price" value="${fieldValue(bean: pizzaInstance, field: 'price')}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'createdOn', 'error')} required">
@@ -50,31 +50,6 @@
 	<g:textField name="description" value="${pizzaInstance?.description}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'flavors', 'error')} ">
-	<label for="flavors">
-		<g:message code="pizza.flavors.label" default="Flavors" />
-		
-	</label>
-	<g:select name="flavors" from="${br.com.comerpizza.Flavor.list()}" multiple="multiple" optionKey="id" size="5" value="${pizzaInstance?.flavors*.id}" class="many-to-many"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'ingredients', 'error')} ">
-	<label for="ingredients">
-		<g:message code="pizza.ingredients.label" default="Ingredients" />
-		
-	</label>
-	
-<ul class="one-to-many">
-<g:each in="${pizzaInstance?.ingredients?}" var="i">
-    <li><g:link controller="pizzaIngredient" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="pizzaIngredient" action="create" params="['pizza.id': pizzaInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'pizzaIngredient.label', default: 'PizzaIngredient')])}</g:link>
-</li>
-</ul>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'isActive', 'error')} ">
 	<label for="isActive">
 		<g:message code="pizza.isActive.label" default="Is Active" />
@@ -91,12 +66,20 @@
 	<g:checkBox name="isHidden" value="${pizzaInstance?.isHidden}" />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'price', 'error')} required">
-	<label for="price">
-		<g:message code="pizza.price.label" default="Price" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'photoUrl', 'error')} ">
+	<label for="photoUrl">
+		<g:message code="pizza.photoUrl.label" default="Photo Url" />
+		
 	</label>
-	<g:field name="price" value="${fieldValue(bean: pizzaInstance, field: 'price')}" required=""/>
+	<g:textField name="photoUrl" value="${pizzaInstance?.photoUrl}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'thumbnailUrl', 'error')} ">
+	<label for="thumbnailUrl">
+		<g:message code="pizza.thumbnailUrl.label" default="Thumbnail Url" />
+		
+	</label>
+	<g:textField name="thumbnailUrl" value="${pizzaInstance?.thumbnailUrl}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: pizzaInstance, field: 'updatedOn', 'error')} required">

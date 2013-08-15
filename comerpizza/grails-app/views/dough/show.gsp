@@ -41,15 +41,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${doughInstance?.imageUrl}">
-				<li class="fieldcontain">
-					<span id="imageUrl-label" class="property-label"><g:message code="dough.imageUrl.label" default="Image Url" /></span>
-					
-						<span class="property-value" aria-labelledby="imageUrl-label"><g:fieldValue bean="${doughInstance}" field="imageUrl"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${doughInstance?.isActive}">
 				<li class="fieldcontain">
 					<span id="isActive-label" class="property-label"><g:message code="dough.isActive.label" default="Is Active" /></span>
@@ -64,6 +55,24 @@
 					<span id="isHidden-label" class="property-label"><g:message code="dough.isHidden.label" default="Is Hidden" /></span>
 					
 						<span class="property-value" aria-labelledby="isHidden-label"><g:formatBoolean boolean="${doughInstance?.isHidden}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${doughInstance?.photoUrl}">
+				<li class="fieldcontain">
+					<span id="photoUrl-label" class="property-label"><g:message code="dough.photoUrl.label" default="Photo Url" /></span>
+					
+						<span class="property-value" aria-labelledby="photoUrl-label"><g:fieldValue bean="${doughInstance}" field="photoUrl"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${doughInstance?.thumbnailUrl}">
+				<li class="fieldcontain">
+					<span id="thumbnailUrl-label" class="property-label"><g:message code="dough.thumbnailUrl.label" default="Thumbnail Url" /></span>
+					
+						<span class="property-value" aria-labelledby="thumbnailUrl-label"><g:fieldValue bean="${doughInstance}" field="thumbnailUrl"/></span>
 					
 				</li>
 				</g:if>

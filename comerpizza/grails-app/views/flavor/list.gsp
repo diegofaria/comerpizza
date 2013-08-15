@@ -26,10 +26,6 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'flavor.name.label', default: 'Name')}" />
 					
-						<g:sortableColumn property="imageUrl" title="${message(code: 'flavor.imageUrl.label', default: 'Image Url')}" />
-					
-						<g:sortableColumn property="thumbnailUrl" title="${message(code: 'flavor.thumbnailUrl.label', default: 'Thumbnail Url')}" />
-					
 						<g:sortableColumn property="description" title="${message(code: 'flavor.description.label', default: 'Description')}" />
 					
 						<g:sortableColumn property="isActive" title="${message(code: 'flavor.isActive.label', default: 'Is Active')}" />
@@ -43,10 +39,6 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${flavorInstance.id}">${fieldValue(bean: flavorInstance, field: "name")}</g:link></td>
-					
-						<td>${fieldValue(bean: flavorInstance, field: "imageUrl")}</td>
-					
-						<td>${fieldValue(bean: flavorInstance, field: "thumbnailUrl")}</td>
 					
 						<td>${fieldValue(bean: flavorInstance, field: "description")}</td>
 					

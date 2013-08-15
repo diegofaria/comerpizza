@@ -18,14 +18,6 @@
 	<g:textField name="description" required="" value="${doughInstance?.description}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: doughInstance, field: 'imageUrl', 'error')} ">
-	<label for="imageUrl">
-		<g:message code="dough.imageUrl.label" default="Image Url" />
-		
-	</label>
-	<g:textField name="imageUrl" value="${doughInstance?.imageUrl}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: doughInstance, field: 'isActive', 'error')} ">
 	<label for="isActive">
 		<g:message code="dough.isActive.label" default="Is Active" />
@@ -40,5 +32,21 @@
 		
 	</label>
 	<g:checkBox name="isHidden" value="${doughInstance?.isHidden}" />
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: doughInstance, field: 'photoUrl', 'error')} ">
+	<label for="photoUrl">
+		<g:message code="dough.photoUrl.label" default="Photo Url" />
+		
+	</label>
+	<g:textField name="photoUrl" value="${doughInstance?.photoUrl}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: doughInstance, field: 'thumbnailUrl', 'error')} ">
+	<label for="thumbnailUrl">
+		<g:message code="dough.thumbnailUrl.label" default="Thumbnail Url" />
+		
+	</label>
+	<g:textField name="thumbnailUrl" value="${doughInstance?.thumbnailUrl}"/>
 </div>
 

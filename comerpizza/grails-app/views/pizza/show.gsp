@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${pizzaInstance?.flavor}">
+				<li class="fieldcontain">
+					<span id="flavor-label" class="property-label"><g:message code="pizza.flavor.label" default="Flavor" /></span>
+					
+						<span class="property-value" aria-labelledby="flavor-label"><g:link controller="flavor" action="show" id="${pizzaInstance?.flavor?.id}">${pizzaInstance?.flavor?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${pizzaInstance?.size}">
 				<li class="fieldcontain">
 					<span id="size-label" class="property-label"><g:message code="pizza.size.label" default="Size" /></span>
@@ -41,20 +50,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${pizzaInstance?.specialBorder}">
+				<g:if test="${pizzaInstance?.price}">
 				<li class="fieldcontain">
-					<span id="specialBorder-label" class="property-label"><g:message code="pizza.specialBorder.label" default="Special Border" /></span>
+					<span id="price-label" class="property-label"><g:message code="pizza.price.label" default="Price" /></span>
 					
-						<span class="property-value" aria-labelledby="specialBorder-label"><g:link controller="border" action="show" id="${pizzaInstance?.specialBorder?.id}">${pizzaInstance?.specialBorder?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${pizzaInstance?.dough}">
-				<li class="fieldcontain">
-					<span id="dough-label" class="property-label"><g:message code="pizza.dough.label" default="Dough" /></span>
-					
-						<span class="property-value" aria-labelledby="dough-label"><g:link controller="dough" action="show" id="${pizzaInstance?.dough?.id}">${pizzaInstance?.dough?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${pizzaInstance}" field="price"/></span>
 					
 				</li>
 				</g:if>
@@ -77,28 +77,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${pizzaInstance?.flavors}">
-				<li class="fieldcontain">
-					<span id="flavors-label" class="property-label"><g:message code="pizza.flavors.label" default="Flavors" /></span>
-					
-						<g:each in="${pizzaInstance.flavors}" var="f">
-						<span class="property-value" aria-labelledby="flavors-label"><g:link controller="flavor" action="show" id="${f.id}">${f?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${pizzaInstance?.ingredients}">
-				<li class="fieldcontain">
-					<span id="ingredients-label" class="property-label"><g:message code="pizza.ingredients.label" default="Ingredients" /></span>
-					
-						<g:each in="${pizzaInstance.ingredients}" var="i">
-						<span class="property-value" aria-labelledby="ingredients-label"><g:link controller="pizzaIngredient" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></span>
-						</g:each>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${pizzaInstance?.isActive}">
 				<li class="fieldcontain">
 					<span id="isActive-label" class="property-label"><g:message code="pizza.isActive.label" default="Is Active" /></span>
@@ -117,11 +95,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${pizzaInstance?.price}">
+				<g:if test="${pizzaInstance?.photoUrl}">
 				<li class="fieldcontain">
-					<span id="price-label" class="property-label"><g:message code="pizza.price.label" default="Price" /></span>
+					<span id="photoUrl-label" class="property-label"><g:message code="pizza.photoUrl.label" default="Photo Url" /></span>
 					
-						<span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${pizzaInstance}" field="price"/></span>
+						<span class="property-value" aria-labelledby="photoUrl-label"><g:fieldValue bean="${pizzaInstance}" field="photoUrl"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${pizzaInstance?.thumbnailUrl}">
+				<li class="fieldcontain">
+					<span id="thumbnailUrl-label" class="property-label"><g:message code="pizza.thumbnailUrl.label" default="Thumbnail Url" /></span>
+					
+						<span class="property-value" aria-labelledby="thumbnailUrl-label"><g:fieldValue bean="${pizzaInstance}" field="thumbnailUrl"/></span>
 					
 				</li>
 				</g:if>

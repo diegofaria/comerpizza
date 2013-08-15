@@ -41,15 +41,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${sizeInstance?.imageUrl}">
-				<li class="fieldcontain">
-					<span id="imageUrl-label" class="property-label"><g:message code="size.imageUrl.label" default="Image Url" /></span>
-					
-						<span class="property-value" aria-labelledby="imageUrl-label"><g:fieldValue bean="${sizeInstance}" field="imageUrl"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${sizeInstance?.isActive}">
 				<li class="fieldcontain">
 					<span id="isActive-label" class="property-label"><g:message code="size.isActive.label" default="Is Active" /></span>
@@ -64,6 +55,15 @@
 					<span id="isHidden-label" class="property-label"><g:message code="size.isHidden.label" default="Is Hidden" /></span>
 					
 						<span class="property-value" aria-labelledby="isHidden-label"><g:formatBoolean boolean="${sizeInstance?.isHidden}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${sizeInstance?.photoUrl}">
+				<li class="fieldcontain">
+					<span id="photoUrl-label" class="property-label"><g:message code="size.photoUrl.label" default="Photo Url" /></span>
+					
+						<span class="property-value" aria-labelledby="photoUrl-label"><g:fieldValue bean="${sizeInstance}" field="photoUrl"/></span>
 					
 				</li>
 				</g:if>

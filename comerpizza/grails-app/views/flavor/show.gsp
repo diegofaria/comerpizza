@@ -32,29 +32,22 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${flavorInstance?.imageUrl}">
-				<li class="fieldcontain">
-					<span id="imageUrl-label" class="property-label"><g:message code="flavor.imageUrl.label" default="Image Url" /></span>
-					
-						<span class="property-value" aria-labelledby="imageUrl-label"><g:fieldValue bean="${flavorInstance}" field="imageUrl"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${flavorInstance?.thumbnailUrl}">
-				<li class="fieldcontain">
-					<span id="thumbnailUrl-label" class="property-label"><g:message code="flavor.thumbnailUrl.label" default="Thumbnail Url" /></span>
-					
-						<span class="property-value" aria-labelledby="thumbnailUrl-label"><g:fieldValue bean="${flavorInstance}" field="thumbnailUrl"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${flavorInstance?.description}">
 				<li class="fieldcontain">
 					<span id="description-label" class="property-label"><g:message code="flavor.description.label" default="Description" /></span>
 					
 						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${flavorInstance}" field="description"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${flavorInstance?.ingredients}">
+				<li class="fieldcontain">
+					<span id="ingredients-label" class="property-label"><g:message code="flavor.ingredients.label" default="Ingredients" /></span>
+					
+						<g:each in="${flavorInstance.ingredients}" var="i">
+						<span class="property-value" aria-labelledby="ingredients-label"><g:link controller="flavorIngredient" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

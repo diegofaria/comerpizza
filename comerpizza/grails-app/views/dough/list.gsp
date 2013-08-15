@@ -28,11 +28,13 @@
 					
 						<g:sortableColumn property="description" title="${message(code: 'dough.description.label', default: 'Description')}" />
 					
-						<g:sortableColumn property="imageUrl" title="${message(code: 'dough.imageUrl.label', default: 'Image Url')}" />
-					
 						<g:sortableColumn property="isActive" title="${message(code: 'dough.isActive.label', default: 'Is Active')}" />
 					
 						<g:sortableColumn property="isHidden" title="${message(code: 'dough.isHidden.label', default: 'Is Hidden')}" />
+					
+						<g:sortableColumn property="photoUrl" title="${message(code: 'dough.photoUrl.label', default: 'Photo Url')}" />
+					
+						<g:sortableColumn property="thumbnailUrl" title="${message(code: 'dough.thumbnailUrl.label', default: 'Thumbnail Url')}" />
 					
 					</tr>
 				</thead>
@@ -44,11 +46,13 @@
 					
 						<td>${fieldValue(bean: doughInstance, field: "description")}</td>
 					
-						<td>${fieldValue(bean: doughInstance, field: "imageUrl")}</td>
-					
 						<td><g:formatBoolean boolean="${doughInstance.isActive}" /></td>
 					
 						<td><g:formatBoolean boolean="${doughInstance.isHidden}" /></td>
+					
+						<td>${fieldValue(bean: doughInstance, field: "photoUrl")}</td>
+					
+						<td>${fieldValue(bean: doughInstance, field: "thumbnailUrl")}</td>
 					
 					</tr>
 				</g:each>

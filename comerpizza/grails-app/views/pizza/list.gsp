@@ -26,11 +26,11 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'pizza.name.label', default: 'Name')}" />
 					
+						<th><g:message code="pizza.flavor.label" default="Flavor" /></th>
+					
 						<th><g:message code="pizza.size.label" default="Size" /></th>
 					
-						<th><g:message code="pizza.specialBorder.label" default="Special Border" /></th>
-					
-						<th><g:message code="pizza.dough.label" default="Dough" /></th>
+						<g:sortableColumn property="price" title="${message(code: 'pizza.price.label', default: 'Price')}" />
 					
 						<g:sortableColumn property="createdOn" title="${message(code: 'pizza.createdOn.label', default: 'Created On')}" />
 					
@@ -44,11 +44,11 @@
 					
 						<td><g:link action="show" id="${pizzaInstance.id}">${fieldValue(bean: pizzaInstance, field: "name")}</g:link></td>
 					
+						<td>${fieldValue(bean: pizzaInstance, field: "flavor")}</td>
+					
 						<td>${fieldValue(bean: pizzaInstance, field: "size")}</td>
 					
-						<td>${fieldValue(bean: pizzaInstance, field: "specialBorder")}</td>
-					
-						<td>${fieldValue(bean: pizzaInstance, field: "dough")}</td>
+						<td>${fieldValue(bean: pizzaInstance, field: "price")}</td>
 					
 						<td><g:formatDate date="${pizzaInstance.createdOn}" /></td>
 					

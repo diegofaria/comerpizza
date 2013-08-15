@@ -28,11 +28,11 @@
 					
 						<g:sortableColumn property="description" title="${message(code: 'size.description.label', default: 'Description')}" />
 					
-						<g:sortableColumn property="imageUrl" title="${message(code: 'size.imageUrl.label', default: 'Image Url')}" />
-					
 						<g:sortableColumn property="isActive" title="${message(code: 'size.isActive.label', default: 'Is Active')}" />
 					
 						<g:sortableColumn property="isHidden" title="${message(code: 'size.isHidden.label', default: 'Is Hidden')}" />
+					
+						<g:sortableColumn property="photoUrl" title="${message(code: 'size.photoUrl.label', default: 'Photo Url')}" />
 					
 					</tr>
 				</thead>
@@ -44,11 +44,11 @@
 					
 						<td>${fieldValue(bean: sizeInstance, field: "description")}</td>
 					
-						<td>${fieldValue(bean: sizeInstance, field: "imageUrl")}</td>
-					
 						<td><g:formatBoolean boolean="${sizeInstance.isActive}" /></td>
 					
 						<td><g:formatBoolean boolean="${sizeInstance.isHidden}" /></td>
+					
+						<td>${fieldValue(bean: sizeInstance, field: "photoUrl")}</td>
 					
 					</tr>
 				</g:each>

@@ -4,24 +4,24 @@ class Pizza {
 
 	String name
 	String description
+	Flavor flavor
+	Size size
+	Double price
+	String photoUrl
+	String thumbnailUrl
 	Boolean isHidden		//inativar a pizza temporariamente por falta de ingrediente
-	Boolean isActive		//desativar o tipo de pizza			
-	Size size 				
-	Border specialBorder	//se possui borda recheada
-	Dough dough 			//tipo da massa
+	Boolean isActive		//desativar pizza
 	Date createdOn
 	Date updatedOn
-	Double price
-
-	static hasMany = [
-		flavors:Flavor,
-		ingredients:PizzaIngredient
-	]
 
     static constraints = {
     	name(blank: false, nullable:false)
+    	flavor(nullable: false)
     	size(nullable: false)
-    	specialBorder(nullable: true)
-    	dough(nullable: true)
+    	price(nullable: false)
+    }
+
+    public Pizza() {
+    	createdOn = new Date()
     }
 }

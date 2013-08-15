@@ -1,19 +1,17 @@
 package br.com.comerpizza
 
 class Flavor {
-
-	//Dominio para o sabor
-
+	//sabor
 	String name
 	String description
-	String imageUrl
-	String thumbnailUrl
 	Boolean isHidden
 	Boolean isActive
 
+	static hasMany = [
+		ingredients:FlavorIngredient
+	]
+
     static constraints = {
     	name(blank: false, nullable: false)
-    	imageUrl(blank: false, nullable: false)
-    	thumbnailUrl(blank: false, nullable: false)
     }
 }

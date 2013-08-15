@@ -26,7 +26,11 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'border.name.label', default: 'Name')}" />
 					
+						<g:sortableColumn property="photoUrl" title="${message(code: 'border.photoUrl.label', default: 'Photo Url')}" />
+					
 						<g:sortableColumn property="price" title="${message(code: 'border.price.label', default: 'Price')}" />
+					
+						<g:sortableColumn property="thumbnailUrl" title="${message(code: 'border.thumbnailUrl.label', default: 'Thumbnail Url')}" />
 					
 					</tr>
 				</thead>
@@ -36,7 +40,11 @@
 					
 						<td><g:link action="show" id="${borderInstance.id}">${fieldValue(bean: borderInstance, field: "name")}</g:link></td>
 					
+						<td>${fieldValue(bean: borderInstance, field: "photoUrl")}</td>
+					
 						<td>${fieldValue(bean: borderInstance, field: "price")}</td>
+					
+						<td>${fieldValue(bean: borderInstance, field: "thumbnailUrl")}</td>
 					
 					</tr>
 				</g:each>

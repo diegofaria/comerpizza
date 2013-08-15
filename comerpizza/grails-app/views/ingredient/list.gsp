@@ -32,8 +32,6 @@
 					
 						<g:sortableColumn property="isHidden" title="${message(code: 'ingredient.isHidden.label', default: 'Is Hidden')}" />
 					
-						<g:sortableColumn property="price" title="${message(code: 'ingredient.price.label', default: 'Price')}" />
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -47,8 +45,6 @@
 						<td><g:formatBoolean boolean="${ingredientInstance.isActive}" /></td>
 					
 						<td><g:formatBoolean boolean="${ingredientInstance.isHidden}" /></td>
-					
-						<td>${fieldValue(bean: ingredientInstance, field: "price")}</td>
 					
 					</tr>
 				</g:each>

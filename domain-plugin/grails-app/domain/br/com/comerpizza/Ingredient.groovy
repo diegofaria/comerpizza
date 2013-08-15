@@ -7,8 +7,7 @@ class Ingredient {
 	String name
 	String description
 	Boolean isHidden
-	Boolean isActive	
-	Double price
+	Boolean isActive
 
     static constraints = {
     	name(blank: false, nullable: false)

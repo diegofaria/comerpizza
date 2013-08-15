@@ -34,11 +34,3 @@
 	<g:checkBox name="isHidden" value="${ingredientInstance?.isHidden}" />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: ingredientInstance, field: 'price', 'error')} required">
-	<label for="price">
-		<g:message code="ingredient.price.label" default="Price" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="price" value="${fieldValue(bean: ingredientInstance, field: 'price')}" required=""/>
-</div>
-

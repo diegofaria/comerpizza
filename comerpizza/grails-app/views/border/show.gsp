@@ -32,11 +32,29 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${borderInstance?.photoUrl}">
+				<li class="fieldcontain">
+					<span id="photoUrl-label" class="property-label"><g:message code="border.photoUrl.label" default="Photo Url" /></span>
+					
+						<span class="property-value" aria-labelledby="photoUrl-label"><g:fieldValue bean="${borderInstance}" field="photoUrl"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${borderInstance?.price}">
 				<li class="fieldcontain">
 					<span id="price-label" class="property-label"><g:message code="border.price.label" default="Price" /></span>
 					
 						<span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${borderInstance}" field="price"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${borderInstance?.thumbnailUrl}">
+				<li class="fieldcontain">
+					<span id="thumbnailUrl-label" class="property-label"><g:message code="border.thumbnailUrl.label" default="Thumbnail Url" /></span>
+					
+						<span class="property-value" aria-labelledby="thumbnailUrl-label"><g:fieldValue bean="${borderInstance}" field="thumbnailUrl"/></span>
 					
 				</li>
 				</g:if>

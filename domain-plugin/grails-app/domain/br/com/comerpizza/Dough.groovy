@@ -1,12 +1,11 @@
 package br.com.comerpizza
 
 class Dough {
-
-	//Domimio para a massa
-
+	//massa
 	String name
 	String description
-	String imageUrl
+	String photoUrl
+	String thumbnailUrl
 	Boolean isHidden
 	Boolean isActive
 
