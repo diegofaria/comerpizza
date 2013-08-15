@@ -16,7 +16,7 @@ environments {
             dialect = org.hibernate.dialect.MySQL5InnoDBDialect
             driverClassName = "com.mysql.jdbc.Driver"
             pooled = true
-            dbCreate = "update" 
+            dbCreate = "create-drop" 
             url="jdbc:mysql://localhost:3306/comerpizza"
             username = "root"
             password = "root"

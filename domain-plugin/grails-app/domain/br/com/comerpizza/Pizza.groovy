@@ -4,6 +4,8 @@ class Pizza {
 
 	String name
 	String description
+	Category category 		// doce, salgada, mesclada
+	PizzaType type 			// premium, quadrada, por metro
 	Flavor flavor
 	Size size
 	Double price
