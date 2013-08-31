@@ -9,17 +9,17 @@
 
 		<!--basic styles-->
 
-		<link href="/css/ace-theme/bootstrap.min.css" rel="stylesheet" />
-		<link href="/css/ace-theme/bootstrap-responsive.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="/css/ace-theme/font-awesome.min.css" />
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 
 		<!--[if IE 7]>
-		  <link rel="stylesheet" href="/css/ace-theme/font-awesome-ie7.min.css" />
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
 		<![endif]-->
 
 		<!--page specific plugin styles-->
 
-		<link rel="stylesheet" href="/css/ace-theme/select2.css" />
+		<link rel="stylesheet" href="assets/css/select2.css" />
 
 		<!--fonts-->
 
@@ -27,12 +27,12 @@
 
 		<!--ace styles-->
 
-		<link rel="stylesheet" href="/css/ace-theme/ace.min.css" />
-		<link rel="stylesheet" href="/css/ace-theme/ace-responsive.min.css" />
-		<link rel="stylesheet" href="/css/ace-theme/ace-skins.min.css" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
 
 		<!--[if lte IE 8]>
-		  <link rel="stylesheet" href="/css/ace-theme/ace-ie.min.css" />
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!--inline styles related to this page-->
@@ -222,35 +222,35 @@
 		<!--[if !IE]>-->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='/js/ace-theme/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!--<![endif]-->
 
 		<!--[if IE]>
 <script type="text/javascript">
- window.jQuery || document.write("<script src='/js/ace-theme/jquery-1.10.2.min.js'>"+"<"+"/script>");
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='/js/ace-theme/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="/js/ace-theme/bootstrap.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
 
 		<!--page specific plugin scripts-->
 
-		<script src="/js/ace-theme/fuelux/fuelux.wizard.min.js"></script>
-		<script src="/js/ace-theme/jquery.validate.min.js"></script>
-		<script src="/js/ace-theme/additional-methods.min.js"></script>
-		<script src="/js/ace-theme/bootbox.min.js"></script>
-		<script src="/js/ace-theme/jquery.maskedinput.min.js"></script>
-		<script src="/js/ace-theme/select2.min.js"></script>
+		<script src="assets/js/fuelux/fuelux.wizard.min.js"></script>
+		<script src="assets/js/jquery.validate.min.js"></script>
+		<script src="assets/js/additional-methods.min.js"></script>
+		<script src="assets/js/bootbox.min.js"></script>
+		<script src="assets/js/jquery.maskedinput.min.js"></script>
+		<script src="assets/js/select2.min.js"></script>
 
 		<!--ace scripts-->
 
-		<script src="/js/ace-theme/ace-elements.min.js"></script>
-		<script src="/js/ace-theme/ace.min.js"></script>
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
 
 		<!--inline scripts related to this page-->
 
